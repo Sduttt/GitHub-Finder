@@ -17,6 +17,7 @@ import Signup from './pages/Signup'
 import userContext from './context/context';
 import './App.css';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 initializeApp(firebaseConfig)
 const App = () => {
@@ -32,6 +33,7 @@ const App = () => {
           <Route path='/signin' element={<Signin />} />
           <Route path='*' element={<PageNotFound />} />
         </Routes>
+        <Footer />
       </userContext.Provider>
     </Router>
   )

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { BsGithub } from "react-icons/bs";
 import userContext from "../context/context";
@@ -11,18 +11,18 @@ const Navbar = () => {
       <div className="flex items-center">
         <h1 className="flex text-xl font-bold">
           <Link to="/" className="flex items-center">
-            {" "}
+            
             <BsGithub className="mr-2" /> GitHub Finder
-          </Link>{" "}
+          </Link>
         </h1>
-        <h2 className=" text-sm underline underline-offset-2 font-medium ml-4">
-          {context.user?.email ? context.user.email : ""}{" "}
-        </h2>
+        {/* <h2 className=" text-sm underline underline-offset-2 font-medium ml-4">
+          {context.user?.email ? context.user.email : ""}
+        </h2> */}
       </div>
       <div className="flex">
         {context.user ? (
-          <p className="mx-2">
-            <Link to="/">Log Out</Link>
+          <p className="mx-2 cursor-pointer" onClick={() => context.setUser(null)}>
+            Log out
           </p>
         ) : (
           <>
