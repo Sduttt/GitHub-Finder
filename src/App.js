@@ -1,19 +1,19 @@
 import React, {useState} from 'react';
-
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-
+//Router
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+//Toast
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+//Firebase
 import { initializeApp } from 'firebase/app';
 import 'firebase/auth';
 import firebaseConfig from './config/firebaseConfig';
-
+//Pages
 import Home from './pages/Home';
 import PageNotFound from './pages/PageNotFound';
 import Signin from './pages/Signin';
 import Signup from './pages/Signup'
-
+//Components
 import userContext from './context/context';
 import './App.css';
 import Navbar from './components/Navbar';
