@@ -1,7 +1,7 @@
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  apiKey: "AIzaSyCimSGy-s-3714qXp2bHM4lFBsbp91aVXk",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "github-details-app.firebaseapp.com",
   projectId: "github-details-app",
   storageBucket: "github-details-app.appspot.com",
